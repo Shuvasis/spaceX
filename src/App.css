@@ -1,0 +1,150 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main main main'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  /* background-color: #2196F3; */
+  /* background-color: #F2F2F2; */
+  padding: 10px;
+}
+
+.grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: #F2F2F2;
+
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.item6 {grid-area: middle;}
+
+.grid-containers {
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  row-gap: 20px;
+  /* column-gap: 10px; */
+}
+
+.grid-button-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+  background-color: #FFFFFF;
+}
+
+.item2.bg-color {
+  background-color: #FFFFFF;
+}
+
+.grid-button-container > button {
+  background-color: #C3E09C;
+  color: black;
+  padding: 10px;
+  padding-right: 30px;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 10px;
+  width: 35%;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.grid-button-container > button:hover {
+  background-color: #7ABA00;
+}
+
+.heading {
+  font-weight: bold;
+  margin-left: 15px;
+
+}
+
+.fil {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.grid-item {
+  background-color: #FFFFFF;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 15px;
+  text-align: left;
+  height: 350px;
+  width: 235px;
+  /* color: #6c4fc2; */
+}
+
+.mission { 
+  color: #030303;
+  font-weight: bold;
+}
+
+.missionSpan { 
+  color: #6c4fc2c9;
+  font-weight: normal;
+}
+
+.missionName {
+  color: #6c4fc2;
+  font-weight: bold;
+}
+
+.images {
+  height: 170px;
+  width: 236px;
+  background-color: #F2F2F2;
+}
+
+hr {
+  width: 150px;
+}
+
+.filter_label {
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-container {
+    
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .grid-item {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    
+  }
+
+  .grid-containers {
+    overflow: hidden;
+    grid-template-columns: auto;
+
+  }
+
+  .images {
+    
+    width: 100%;
+    /* background-color: gray; */
+  }
+}
